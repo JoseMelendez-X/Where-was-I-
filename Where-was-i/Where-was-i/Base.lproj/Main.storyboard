@@ -22,14 +22,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lez-4r-cIk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tt9-fy-HJi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Where was I?" id="dhM-sS-Mcd">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="iI1-p5-X1n">
+                                            <connections>
+                                                <action selector="saveButtonClicked:" destination="BYZ-38-t0r" id="o82-eO-sbX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tt9-fy-HJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ew-qP-z5T"/>
                             <constraint firstItem="lez-4r-cIk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ngl-rE-2P5"/>
                             <constraint firstAttribute="trailing" secondItem="lez-4r-cIk" secondAttribute="trailing" id="R3T-Z6-iy3"/>
-                            <constraint firstItem="lez-4r-cIk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kp4-0N-vFb"/>
+                            <constraint firstItem="lez-4r-cIk" firstAttribute="top" secondItem="tt9-fy-HJi" secondAttribute="bottom" id="ZPt-43-2ow"/>
+                            <constraint firstItem="tt9-fy-HJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ehz-aO-EiX"/>
+                            <constraint firstAttribute="trailing" secondItem="tt9-fy-HJi" secondAttribute="trailing" id="l35-iC-H9W"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lez-4r-cIk" secondAttribute="bottom" id="rkU-iu-Oxt"/>
                         </constraints>
                     </view>
@@ -39,6 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>

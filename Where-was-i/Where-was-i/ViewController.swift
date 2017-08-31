@@ -13,6 +13,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        
+        //Get the coordinates
+        let coord = locationManager.location?.coordinate
+        
+        if let longitude = coord?.longitude {
+            print("longitude: " + String(longitude))
+        }
+        
+        if let latitude = coord?.latitude {
+            
+            print("latitude: " + String(latitude))
+        }
+        
+        
+    }
     //Location Manager 
     let locationManager = CLLocationManager()
     
